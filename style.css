@@ -1,0 +1,694 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-wrap: nowrap;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+li a {
+    position: relative;
+    color: white;
+    font-weight: 300;
+}
+
+/* UNDERLINE EFFECT */
+li a::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    left: 0;
+    height: 5px;
+    top: 25px;
+    border-radius: 1rem;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+}
+
+li a:hover::before {
+    width: 100%;
+}
+
+/* BUTTON */
+.visit-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 3rem;
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    text-wrap: nowrap;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+}
+
+.visit-btn:hover {
+    background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 157, 255));
+    transform: scale(1.03);
+}
+
+/* MENU ICON */
+#menu-icon {
+    font-size: 2rem;
+    display: none;
+}
+/* SECTION */
+section {
+    min-height: 100vh;
+    padding: 8rem 12%;
+    width: 100%;
+    position: relative;
+}
+
+/* ABOUT SECTION */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+
+/* IMAGE */
+.about img {
+    width: 30vw;
+    border-radius: 50%;
+}
+
+/* INFO BOX */
+.info-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.info-box h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.info-box h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+/* GRADIENT TEXT */
+.info-box span {
+    background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 157, 255));
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+}
+
+/* BUTTONS */
+.btn-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+/* SOCIAL ICONS */
+.socials {
+    display: flex;
+    gap: 2rem;
+}
+
+.socials i {
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.socials i:hover {
+    transform: scale(1.1);
+}
+/* SECTION TITLE */
+.section-title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+/* EXPERIENCE */
+.experience-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.experience img {
+    width: 24vw;
+    border-radius: 3rem;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* CARD */
+.grid-card {
+    border: 2px solid black;
+    border-radius: 3rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: left;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.grid-card:hover {
+    transform: scale(1.02);
+    background-color: black;
+    color: white;
+}
+
+/* ICON */
+.grid-card i {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* TITLE */
+.grid-card span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: linear-gradient(to right, #009dff, #ff00ff);
+    background-clip: text;
+    color: transparent;
+}
+
+/* TEXT */
+.grid-card h3 {
+    margin-top: 0.5rem;
+}
+
+.grid-card p {
+    margin-top: 0.5rem;
+}
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+.skill {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+
+    /* ✅ SAME GRADIENT AS GITHUB BUTTON */
+    background: linear-gradient(to right, #00d4ff, #ff00ff);
+    color: white;
+
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover */
+.skill:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+@media (max-width: 768px) {
+    .skills-container {
+        gap: 1rem;
+    }
+
+    .skill {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== Projects Section ===== */
+#projects {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* GRID */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 580px;
+    margin: auto;
+}
+
+/* CARD */
+.project-card {
+    background: #f5f5f5; /* grey */
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: 2px solid #ddd;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT (blue theme) */
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #4facfe;
+    box-shadow: 0 10px 25px rgba(79, 172, 254, 0.3);
+}
+
+/* IMAGE */
+.project-card img {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* TEXT */
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* BUTTONS */
+.project-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-buttons a {
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    border: 1px solid #4facfe;
+    color: #4facfe;
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+.project-buttons a:hover {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+}
+/* ===== Certificates Section ===== */
+#certificates {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: white;
+}
+
+#certificates h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Grid Layout */
+.cert-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Card Design */
+.cert-card {
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 2px solid black;
+    background: #f9f9f9;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.cert-card:hover {
+    transform: translateY(-8px);
+    background: black;
+    color: white;
+}
+
+/* Image */
+.cert-card img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 1rem;
+}
+
+/* Button */
+.cert-card a {
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+
+    background: linear-gradient(to right, #00d4ff, #ff00ff);
+    color: white;
+
+    transition: 0.3s;
+}
+
+/* Button Hover */
+.cert-card a:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+
+    #certificates {
+        padding: 3rem 1rem;
+    }
+
+    #certificates h2 {
+        font-size: 2rem;
+    }
+
+    .cert-container {
+        gap: 1.5rem;
+    }
+
+    .cert-card {
+        padding: 1.5rem;
+    }
+
+    .cert-card img {
+        max-width: 100%;
+    }
+}
+
+/* CONTACT BOX */
+.input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+/* INPUT FIELD */
+.input-box input {
+    position: relative;
+    border-radius: 3rem;
+    border: 2px solid black;
+    padding: 2rem 8rem;
+    font-size: 3rem;
+}
+
+/* PLACEHOLDER */
+.input-box input::placeholder {
+    font-size: 3rem;
+}
+
+/* ICON */
+.input {
+    position: relative;
+}
+
+.input i {
+    position: absolute;
+    font-size: 4rem;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+/* FOOTER */
+footer {
+    bottom: 0;
+    left: 0;
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FOOTER LINKS */
+footer ul {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+footer ul li a {
+    color: black;
+    font-weight: 600;
+}
+
+/* COPYRIGHT */
+.copyright {
+    font-size: 300;
+    margin-top: 2rem;
+}
+@media (max-width: 1280px) {
+    header {
+        padding: 1rem 2rem;
+        gap: 2rem;
+    }
+
+    .about .about-container {
+        gap: 3rem;
+    }
+
+    .experience-info {
+        flex-direction: column;
+    }
+
+    .input-box input {
+        padding: 2rem 5rem;
+        font-size: 2.5rem;
+    }
+
+    .input-box input::placeholder {
+        font-size: 2.5rem;
+    }
+
+    .input-box i {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 768px) {
+
+    header {
+        gap: 1rem;
+        padding: 1rem 1rem;
+    }
+
+    header .logo {
+        font-size: 1rem;
+    }
+
+    header .visit-btn {
+        display: none;
+    }
+
+    .input-box input {
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+    }
+
+    .input-box input::placeholder {
+        font-size: 1.5rem;
+    }
+
+    .input-box i {
+        font-size: 2rem;
+    }
+
+    /* GRID → single column */
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .experience-info img {
+        width: 70vw;
+    }
+}
+@media (max-width: 600px) {
+
+    header #menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 3rem;
+        display: none;
+    }
+
+    .nav-links li {
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    header {
+        padding: 1rem 5rem;
+        gap: 8rem;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    .about-container img {
+        width: 80vw;
+    }
+
+    .input-box input {
+        padding: 0.5rem 3rem;
+        width: 80%;
+        font-size: 1.5rem;
+    }
+
+    .input-box input::placeholder {
+        font-size: 1.5rem;
+    }
+
+    footer ul {
+        gap: 1rem;
+    }
+}
+/* Default (Light Mode) */
+body {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #0d1117;
+    color: white;
+}
+
+/* Toggle Button Style */
+#theme-toggle {
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background: #333;
+    color: white;
+}
+
+/* Optional hover */
+#theme-toggle:hover {
+    opacity: 0.8;
+}
+
+.contact-box {
+    display: none;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #222;
+    color: white;
+    border-radius: 8px;
+    width: fit-content;
+}
